@@ -34,20 +34,41 @@ console.log(user1.compareAge(user1));
 
 class Pet {
     constructor(petName, ownerName, species, breed) {
-      this.petName = petName;
-      this.ownerName = ownerName;
-      this.species = species;
-      this.breed = breed;
+        this.petName = petName;
+        this.ownerName = ownerName;
+        this.species = species;
+        this.breed = breed;
     }
-  
+
     hasSameOwner(otherPet) {
-      return this.ownerName === otherPet.ownerName;
+        return this.ownerName === otherPet.ownerName;
     }
-  }
-  
-  const myPet = new Pet('Fido', 'Mario Rossi', 'Dog', 'Labrador');
-  const otherPet = new Pet('Lessy', 'Giuseppe Verdi', 'Dog', 'Golden Retriever');
-  
-  console.log(myPet.hasSameOwner(otherPet)); // false   
-  otherPet.ownerName = 'Mario Rossi';
-  console.log(myPet.hasSameOwner(otherPet)); // true
+}
+
+const myPet = new Pet('Fido', 'Mario Rossi', 'Dog', 'Labrador');
+const otherPet = new Pet('Lessy', 'Giuseppe Verdi', 'Dog', 'Golden Retriever');
+
+
+
+console.log(myPet);
+console.log(otherPet)
+console.log(myPet.hasSameOwner(otherPet)); // false   
+otherPet.ownerName = 'Mario Rossi';
+console.log(myPet.hasSameOwner(otherPet)); // true
+
+const pets = [];
+
+function addPet() {
+    const petName = document.getElementById('petName').value;
+    const ownerName = document.getElementById('ownerName').value;
+    const species = document.getElementById('species').value;
+    const breed = document.getElementById('breed').value;
+
+    const pet = new Pet(petName, ownerName, species, breed);
+    pets.push(pet);
+
+    const petList = document.getElementById('petList');
+    const listItem = document.createElement('li');
+    listItem.textContent = `Pet Name: ${pet.petName}, Owner Name: ${pet.ownerName}, Species: ${pet.species}, Breed: ${pet.breed}`;
+    petList.appendChild(listItem);
+}

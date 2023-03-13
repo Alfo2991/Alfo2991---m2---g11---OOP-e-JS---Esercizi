@@ -10,26 +10,29 @@
 
 <body>
 
-    <h1>Pets </h1>
-
+    <h1>Pet Form</h1>
     <form>
         <label for="petName">Pet Name:</label>
-        <input type="text" id="petName" name="petName"><br><br>
-      
-        <label for="ownerName">Owner Name:</label>
-        <input type="text" id="ownerName" name="ownerName"><br><br>
-      
-        <label for="species">Species:</label>
-        <input type="text" id="species" name="species"><br><br>
-      
-        <label for="breed">Breed:</label>
-        <input type="text" id="breed" name="breed"><br><br>
-      
-        <input type="submit" value="Submit">
-      </form>
-      
+        <input type="text" id="petName" name="petName"><br>
 
-   
+        <label for="ownerName">Owner Name:</label>
+        <input type="text" id="ownerName" name="ownerName"><br>
+
+        <label for="species">Species:</label>
+        <input type="text" id="species" name="species"><br>
+
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" name="breed"><br>
+
+        <button type="button" onclick="addPet()">Add Pet</button>
+    </form>
+
+    <h2>Pet List</h2>
+    <ul id="petList"></ul>
+
+
+    <script src="index.js"></script>
+
 </body>
- <script src="index.js"></script>
+
 </html>
