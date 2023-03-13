@@ -24,7 +24,7 @@ const user2 = new User('Giuseppe', 'Verdi', 35, 'Milano');
 console.log(user1);
 console.log(user2);
 
-// Test per verificare il metodo compareAge
+// Test metodo compareAge
 console.log(user1.compareAge(user2));
 console.log(user2.compareAge(user1));
 console.log(user1.compareAge(user1));
