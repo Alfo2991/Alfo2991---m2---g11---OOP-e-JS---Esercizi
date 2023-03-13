@@ -28,3 +28,26 @@ console.log(user2);
 console.log(user1.compareAge(user2));
 console.log(user2.compareAge(user1));
 console.log(user1.compareAge(user1));
+
+
+//ESERCIZIO 2 
+
+class Pet {
+    constructor(petName, ownerName, species, breed) {
+      this.petName = petName;
+      this.ownerName = ownerName;
+      this.species = species;
+      this.breed = breed;
+    }
+  
+    hasSameOwner(otherPet) {
+      return this.ownerName === otherPet.ownerName;
+    }
+  }
+  
+  const myPet = new Pet('Fido', 'Mario Rossi', 'Dog', 'Labrador');
+  const otherPet = new Pet('Lessy', 'Giuseppe Verdi', 'Dog', 'Golden Retriever');
+  
+  console.log(myPet.hasSameOwner(otherPet)); // false   
+  otherPet.ownerName = 'Mario Rossi';
+  console.log(myPet.hasSameOwner(otherPet)); // true
